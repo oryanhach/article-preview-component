@@ -89,6 +89,18 @@ body {
 	align-items: center;
 }
 
+.share-btn-container-clicked {
+	background-color: hsl(213, 19%, 52%);
+	border-radius: 100%;
+	margin-left: auto;
+	height: 30px;
+	width: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display: none;
+}
+
 .article-preview__share-btn {
 	height: 15px;
 	width: 15px;
