@@ -212,6 +212,7 @@ footer {
 		max-height: 100%;
 		height: 100%;
 		object-fit: cover;
+		object-position: -20px 0px;
 	}
 
 	.article__description--main {
@@ -231,4 +232,5 @@ footer {
 	}
 }
 
-/* TODO: fix image ratio on tablet */
+@media (min-width: 1440px) {
+}
