@@ -1,0 +1,197 @@
+:root {
+	/* Colors */
+	--clr-grey-900: hsl(217, 19%, 35%);
+	--clr-grey-500: hsl(214, 17%, 51%);
+	--clr-grey-400: hsl(212, 23%, 69%);
+	--clr-grey-200: hsl(210, 46%, 95%);
+
+	--clr-white: #fafafa;
+
+	/* Typography */
+	--ff-primary: 'Manrope', sans-serif;
+
+	--fs-900: 20px; /* Text Preset 1 */
+	--fs-800: 13px; /* Text Preset 2 */
+	--fs-700: 13px; /* Text Preset 3 */
+	--fs-600: 13px; /* Text Preset 4 */
+
+	/* Line Heights */
+	--lh-900: 130%;
+	--lh-800: 140%;
+	--lh-700: 140%;
+	--lh-600: 140%;
+
+	/* Letter Spacing */
+	--ls-900: 0.25px;
+	--ls-800: 0.02px;
+	--ls-700: 0.02px;
+	--ls-600: 4px;
+}
+
+/* CSS Reset */
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+	margin: 0;
+}
+
+body {
+	/* 3. Add accessible line-height */
+	line-height: 1.5;
+	/* 4. Improve text rendering */
+	-webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+	text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-wrap: balance;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+	isolation: isolate;
+}
+
+/* General Styling */
+
+body {
+	font-family: var(--ff-primary);
+	background-color: var(--clr-grey-200);
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.article__preview-card {
+	border-radius: 0.8rem;
+	overflow: hidden;
+	background-color: #fafafa;
+	width: 330px;
+	height: 540px;
+	display: grid;
+	box-shadow: 2px 10px 28px -16px rgba(0, 0, 0, 0.1);
+}
+
+.article__image {
+	max-height: 200px;
+	width: 100%;
+}
+
+.article__description--main {
+	padding: 0 2rem;
+	margin-top: 1.8rem;
+	margin-bottom: 1.5rem;
+	color: var(--clr-grey-900);
+	font-weight: 700;
+	font-size: var(--fs-900);
+	line-height: var(--lh-900);
+	letter-spacing: var(--ls-900);
+}
+
+.article__description--secondary {
+	padding: 0 2rem;
+	color: var(--clr-grey-500);
+	font-size: var(--fs-800);
+	line-height: var(--lh-800);
+	letter-spacing: var(--ls-800);
+	margin-bottom: 2rem;
+}
+
+footer {
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	grid-template-columns: 1fr 5fr 1fr;
+	padding: 0 2rem;
+	margin-bottom: 1rem;
+}
+
+.footer__author-image {
+	border-radius: 5rem;
+	height: 2.5rem;
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 1;
+	grid-row-end: 3;
+	align-self: center;
+}
+
+.footer__author-name {
+	padding-left: 0.5rem;
+	grid-column-start: 2;
+	grid-column-end: 3;
+	color: var(--clr-grey-900);
+	font-weight: 700;
+	font-size: var(--fs-700);
+	line-height: var(--lh-700);
+	letter-spacing: var(--ls-700);
+	align-self: end;
+}
+
+.footer__date {
+	padding-left: 0.5rem;
+	grid-column-start: 2;
+	grid-column-end: 3;
+	color: var(--clr-grey-400);
+	font-size: var(--fs-600);
+	line-height: var(--lh-600);
+	align-self: start;
+}
+
+.footer__share-icon {
+	grid-column-start: 3;
+	grid-column-end: 4;
+	grid-row-start: 1;
+	grid-row-end: 3;
+	align-self: center;
+	border: 9px solid var(--clr-grey-200);
+	border-radius: 50rem;
+	background-color: var(--clr-grey-200);
+}
