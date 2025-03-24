@@ -233,4 +233,9 @@ footer {
 }
 
 @media (min-width: 1440px) {
+	.article__preview-card {
+		width: 45.5rem;
+		height: 17.5rem;
+		grid-template-columns: 1.25fr 1fr 1fr;
+	}
 }
